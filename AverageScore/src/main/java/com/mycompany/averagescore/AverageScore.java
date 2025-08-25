@@ -12,19 +12,17 @@ import java.util.Scanner;
 public class AverageScore {
 
     public static void main(String[] args) {
-        double scores[] = new double[10];
-        double sum = 0.0, avg=0.0;
+        int scores[] = new int[10];
+        double avg=0.0;
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Enter scores of 10 students:");
         for(int i = 0; i < scores.length; i++) {
-            scores[i] = sc.nextDouble();
+            scores[i] = sc.nextInt();
         }
         
-        for(double score: scores) {
-            sum+=score;
-        }
-        avg = sum/scores.length;
+        avg = CalculateAverage.calc(scores);
+        
         
         System.out.println("The average score is "+avg);
     }
