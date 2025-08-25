@@ -22,8 +22,6 @@ public class AverageScore {
         }
         
         avg = CalculateAverage.calc(scores);
-        
-        
         System.out.println("The average score is "+avg);
     }
 }
